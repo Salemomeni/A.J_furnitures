@@ -1,0 +1,69 @@
+.signup-cont{
+    background-color:  rgba(19, 19, 18, 0.671);
+    width: 100vw;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.signup-body{
+    width: 70vw;
+    height: 70vh;
+    background:  rgba(0, 0, 0, 0.486) url('../../assets/images/loginImage.jpg');
+    border-radius: 20px;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.452), 3px 3px 10px rgba(0, 0, 0, 0.562) ;
+    display: flex;
+    background-position: right;
+   background-size: cover;
+   background-blend-mode: darken;
+}
+.image{
+    width: 50%;
+    background: transparent;
+   
+   text-align: center;
+   color: white;
+   border-bottom-right-radius:17px;
+   border-top-right-radius:17px;
+}
+.image h4{
+    font-size: 35px;
+    font-weight: 700;
+}
+.image p{
+    font-size: 17px;
+    padding:0px  10px;
+}
+.mains{
+    width: 50%;
+  background:transparent;
+  background-size: cover;
+   background-blend-mode: darken;
+   text-align: center;
+    border-top-left-radius:17px;
+    border-bottom-left-radius:17px;
+}
+
+.socials{
+    background-color: rgb(73, 48, 24);
+    color: white;
+    width: 35px ;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    border: none;
+    
+}
+.main h3{
+    color: white;
+}
+.input{
+    width: 75%;
+    padding: 6px 14px;
+    border-radius: 14px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.582);
+    box-shadow: inset -1.5px -2px rgba(255, 166, 0,);
+}

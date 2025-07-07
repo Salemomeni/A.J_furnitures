@@ -1,0 +1,176 @@
+.nav-container{
+ background-color: rgba(87, 9, 9, 0.815);
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.logoSection{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logoSection li{
+    list-style: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+}
+.logoSection .logo{
+      height: 50px;
+    width: 50px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.contactSection{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+.contactSection li{
+      list-style: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.sub-menu-wrap{
+    position: absolute;
+    top: 6.8vh;
+    right:50px;
+    width: 250px;
+    border: none;
+    border-radius: 14px;
+     background-color:rgba(58, 46, 47, 0.795);
+     box-shadow: 4px 4px 19px black ,2px 2px 7px black  ;
+}
+.sub-menu{
+    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+.sub-menu input[type='password'],.sub-menu input[type = 'email']{
+    padding: 7px 14px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: inset -1.5px -2px rgba(255, 166, 0, 0.685);
+
+}
+.sub-menu input[type='password'],.sub-menu input[type = 'email']:focus{
+outline: none;
+box-shadow: inset -1.5px -2px rgba(255, 166, 0,);
+}
+.sub-menu p {
+    font-size: 15px;
+    margin-bottom: -10px;
+}
+.Link{
+    text-decoration: none;
+    color: white;
+}
+.Link:hover{
+    color: rgba(255, 249, 249, 0.863);
+}
+
+.sidebar{
+   background-color: rgba(87, 9, 9, 0.575);
+    width: 230px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1001;
+    box-shadow: 8px 0px 15px rgba(0, 0, 0, 0.432) ;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+     backdrop-filter: blur(8px);
+    gap: 5px;
+}
+.sidebar li{
+    list-style: none;
+    width: 100%;
+    padding: 7px 10px;
+    color: white;
+    text-align: center;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Close icon in sidebar */
+.close-icon {
+    align-self: flex-end;
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hide sidebar by default */
+.sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show sidebar when active */
+.sidebar.show {
+    transform: translateX(0);
+}
+
+/* Hide nav-links on small screens */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .logoSection li,
+    .contactSection > li,
+    .contactSection > button,
+    .nav-links {
+        display:none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .contactSection {
+        margin-right: 15px;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .sidebar {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px){
+    .sidebar{
+        width: 100% !important;
+    }
+}

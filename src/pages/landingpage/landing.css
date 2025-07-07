@@ -1,0 +1,413 @@
+.main {
+    background-color: rgb(242, 240, 228);
+}
+
+.grid-container {
+    display: grid;
+        width: 70%;
+    /* justify-content: center; */
+    /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+     /* display: grid; */
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    /* grid-cols-1 */
+    gap: 1.5rem;
+    /* gap-6 */
+    padding: 1rem;
+    /* p-4 */
+    max-width: 80rem;
+    /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+    overflow-y: hidden;
+    /* overflow: hidden; */
+}
+
+.landing {
+    background: rgba(0, 0, 0, 0.423) url('../../assets/images/landing-background.jpg');
+    width: 100vw;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    margin-top: -80px;
+    background-blend-mode: darken;
+}
+
+.landing-content {
+    position: absolute;
+    margin-top: 14%;
+    margin-left: 5%;
+    color: rgba(255, 255, 255, 0.904);
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-weight: 400;
+}
+
+.landing-content p {
+    font-size: 17px;
+}
+
+.landing-content h1 {
+    font-weight: 600;
+}
+
+.miniNav {
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    gap: 15px;
+    margin-top: 2%;
+    flex-wrap: wrap;
+}
+
+.miniNav li {
+    list-style-type: none;
+    padding: 5px 16px;
+    border-radius: 15px;
+    border: 2px solid black;
+    background-color: rgb(242, 240, 228);
+    font-weight: 500;
+}
+
+
+.craft-text {
+    margin-left: -16px;
+    width: 30%;
+}
+
+.craft-text h1 {
+    font-size: 34px;
+    color: rgb(1, 1, 29);
+    margin-top: -40px;
+}
+
+.craft-text p {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.section3 {
+    background: url('https://www.craftedbeds.co.uk/cdn/shop/articles/c6229643564835.57f4204983b16.jpg?v=1654414798');
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 450px;
+    border-radius: 17px;
+    margin-bottom: 10%;
+    background-blend-mode: darken;
+    align-content: center;
+}
+
+.section3Div {
+    background-color: rgb(44 43 38);
+    width: 300px;
+    height: 250px;
+    border-radius: 20px;
+    margin-top: 77px;
+    color: white;
+    padding: 0px 25px;
+}
+
+.section3Div h2 {
+    font-size: 30px;
+}
+
+.section3Div p {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.section4 {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    margin-bottom: 4%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section4 img {
+    position: absolute;
+}
+
+.section4Div1 {
+    width: 60vw;
+    padding: 10px;
+}
+
+.section4Div1 .firstImage {
+    width: 31.04vw;
+    height: 77.32vh;
+    background: url('https://cdn.dsmcdn.com/ty1510/product/media/images/prod/QC/20240828/18/a3eb1d34-d0cd-369b-b56c-310fcb015b59/1_org_zoom.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-left: 16%;
+    border-radius: 17px;
+}
+
+.section4Div1 .thirdImage {
+    width: 325px;
+    height: 410px;
+    background: url('https://images.unsplash.com/photo-1503602642458-232111445657');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    margin: 15% 0% 0% 34%;
+    border-radius: 17px;
+}
+
+.section4Div1 .secondImage {
+    background: url('https://limobelinwo.com/wp-content/uploads/2021/10/estilos-de-oficina.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 14vw;
+    height: 30vh;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.section4Div2 {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+}
+
+.section4Div2 .h3 {
+    font-size: 35px;
+    color: black;
+}
+
+.section4Div2 p {
+    color: rgb(94, 92, 92);
+    padding-right: 100px;
+    font-size: 16.5px;
+}
+
+.bullets {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bullets li {
+    width: 250px;
+    list-style-type: circle;
+    color: rgb(44, 44, 44);
+}
+
+/* ============================= */
+/* RESPONSIVE STYLES START HERE */
+/* ============================= */
+
+@media (max-width: 1024px) {
+    .landing-content {
+        margin-top: 25%;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .landing-content h1 {
+        font-size: 30px;
+    }
+
+    .landing-content p {
+        font-size: 16px;
+    }
+
+    .miniNav {
+        justify-content: end;
+        gap: 10px;
+        margin-bottom: 70px;
+    }
+
+    .section2 {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .craft-text {
+        width: 40%;
+        margin-left: 0;
+    }
+
+    .craft-text h1 {
+        font-size: 28px;
+    }
+
+    .pr {
+        width: 50%;
+        display: flex;
+        /* justify-content: center; */
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .section3Div {
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .section4 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .section4Div1 {
+        width: 90%;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        display: flex;
+        position: relative;
+    }
+
+    .section4Div1 .firstImage {
+        width: 100%;
+        height: 50vh;
+        margin: 0;
+    }
+
+    .section4Div1 .secondImage {
+        width: 100%;
+        height: 400px;
+        margin: 0;
+        display: none;
+    }
+
+    .section4Div1 .thirdImage {
+        display: none;
+    }
+
+    .section4Div2 {
+        width: 90%;
+        text-align: center;
+    }
+
+    .section4Div2 .h3 {
+        font-size: 28px;
+    }
+
+    .section4Div2 p {
+        padding: 0;
+        font-size: 15px;
+    }
+
+    .bullets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bullets li {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-content h1 {
+        font-size: 28px;
+    }
+
+    .landing-content p {
+        font-size: 14px;
+    }
+
+    .section3Div {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .section4Div2 .h3 {
+        font-size: 25px;
+    }
+
+    .section4Div2 p {
+        padding-right: 0;
+        font-size: 14px;
+    }
+
+    .bullets li {
+        width: 100%;
+    }
+
+    .section4Div1 .firstImage {
+        height: 60vh;
+        width: 80vw;
+    }
+
+    .section4Div1 .secondImage {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .landing-content {
+        margin-top: 30%;
+        margin-left: 5%;
+    }
+
+    .landing-content h1 {
+        font-size: 24px;
+    }
+
+    .landing-content p {
+        font-size: 13px;
+    }
+
+    .d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem;
+    }
+
+    .craft-text h1 {
+        font-size: 24px;
+    }
+
+    .section4 {
+        padding: 0 10px;
+    }
+
+    .craft-text {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .craft-text h1 {
+        font-size: 23px;
+    }
+
+    .landing {
+        height: 350px;
+    }
+    .landing-content{
+        /* background-color: blue; */
+        overflow: hidden;
+    }
+    .landing-content p {
+        font-size: 14px;
+
+    }
+
+    .landing-content h1 {
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .but{
+        margin-left: -60%;
+        /* background-color: aqua; */
+    }
+}

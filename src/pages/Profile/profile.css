@@ -1,0 +1,223 @@
+.profile-page {
+    display: flex;
+    gap: 20px;
+    padding: 40px 20px;
+    background: #f7f7f7;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-sidebar {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-sidebar h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.profile-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-sidebar li {
+    padding: 12px 0;
+    border-bottom: 2px solid #eee;
+    font-size: 15px;
+    cursor: pointer;
+    color: #555;
+}
+
+.a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    padding: 12px 0;
+}
+
+.a:hover {
+    color: #050505;
+}
+
+.profile-content {
+    flex: 1;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-content h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.overview-box {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.overview-box h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #222;
+}
+
+.overview-box p {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.overview-box a {
+    color: #f68b1e;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-page {
+        flex-direction: column;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+    }
+}
+
+/* Account Management section */
+.basic-detail {
+    display: flex;
+    gap: 20px;
+}
+.basic-detail .section1 {
+    width: 320px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.basic-detail .section1 h3 {
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.basic-detail .section1 li{
+    list-style: none;
+    /* background-color:#55555583; */
+    padding: 12px 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.07);
+    border-bottom: 2px solid #eee;
+    font-size: 18px;
+    cursor: pointer;
+    color: #555;
+    font-weight: 600;
+}
+.basic-detail .section1 li:hover{
+    background-color: #dddddd85;
+}
+.basic-detail div:nth-of-type(1) li span {
+    padding: 0px 15px;
+    font-size: 25px;
+}
+.sub{
+    width: 100%;
+    height: fit-content;
+    /* margin: -10px 0; */
+}
+.sub li{
+    box-shadow: none !important;
+    border-bottom:1px solid #eee !important;
+    font-size: 16px !important;
+}
+
+.basic-detail .section2{
+    width:600px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ----------- Tablet View (≤870px) ----------- */
+@media screen and (max-width: 870px) {
+  .basic-detail {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .basic-detail .section1,
+  .basic-detail .section2 {
+    width: 90%;
+  }
+
+  .basic-detail .section1 li {
+    font-size: 17px;
+  }
+
+  .basic-detail .section2 {
+    margin-top: 20px;
+  }
+}
+
+/* ----------- Tablet View (≤768px) ----------- */
+@media screen and (max-width: 768px) {
+  .basic-detail {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .basic-detail .section1,
+  .basic-detail .section2 {
+    width: 90%;
+  }
+
+  .basic-detail .section1 li {
+    font-size: 17px;
+  }
+
+  .basic-detail .section2 {
+    margin-top: 20px;
+  }
+}
+
+/* ----------- Mobile View (≤480px) ----------- */
+@media screen and (max-width: 480px) {
+  .basic-detail .section1 h3 {
+    font-size: 1.3rem;
+  }
+
+  .basic-detail .section1 li {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .basic-detail .section1 li span {
+    font-size: 20px;
+    /* padding: 0 10px; */
+  }
+
+  .basic-detail .section2 {
+    padding: 15px;
+  }
+}
