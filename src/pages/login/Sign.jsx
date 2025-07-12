@@ -22,19 +22,25 @@ const Sign = () => {
     const handleform = (e) => {
         e.preventDefault();
 
-        const isfirstnameValid = validatefirstName (firstName , setFirstNameErr)
-        const islastnameValid = validatelastName (lastName , setLastNameErr)
-        const isPasswordValid = validatePassword (password , setPasswordErr)
+        const isfirstnameValid = validatefirstName(firstName, setFirstNameErr)
+        const islastnameValid = validatelastName(lastName, setLastNameErr)
+        const isPasswordValid = validatePassword(password, setPasswordErr)
         if (password !== confirmPassword) {
             alert("Passwords do not match");
             return;
         }
-        const name = `${firstName} ${lastName}`
-        if (isPasswordValid&&isfirstnameValid&&islastnameValid){
-         dispatch(registerUser({ name, email, password }))
+        if (isPasswordValid && isfirstnameValid && islastnameValid) {
+            const userData = {
+                firstName,
+                // middleName,  // if blank, still okay
+                lastName,
+                email,
+                password,
+            };
 
-         console.log(registerUser)
-         alert('sent');
+            dispatch(registerUser(userData));
+            console.log(registerUser)
+            alert('registered successfully sent');
         }
     }
     return (

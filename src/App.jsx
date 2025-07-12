@@ -16,14 +16,13 @@ import About from './pages/about/About'
 import Contact from './pages/Contact us/Contact'
 import ProtectedRoute from './component/authentication/ProtectedRoute'
 import Profile from './pages/Profile/Profile'
-import Login from './pages/login/login'
 import AccountManagement from './pages/Profile/account-management/AccountManagement'
 import EditNumber from './pages/Profile/account-management/EditNumber'
 import DeleteAccount from './pages/Profile/account-management/DeleteAccount'
 import ChangePassword from './pages/Profile/account-management/ChangePassword'
 import SecurityQuestions from './pages/Profile/account-management/SecurityQuestions'
 import BasicDetails from './pages/Profile/account-management/BasicDetails'
-// import{Auth} from './component/authentication/Auth'
+import EditBasicDetials from './pages/Profile/account-management/EditBasicDetials'
 const App = () => {
   return (
     <>
@@ -46,6 +45,7 @@ const App = () => {
        <Route path='accManagement' element = {<AccountManagement/>}>
        <Route path='editNumber' element = {<EditNumber/>}/>
        <Route path='basicDetails' element = {<BasicDetails/>}/>
+       <Route path='EditProfile' element={<EditBasicDetials/>}/>
        <Route path='securityQuestion' element = {<SecurityQuestions/>}/>
        <Route path='changePassword' element = {<ChangePassword/>}/>
        <Route path='deleteAccount' element = {<DeleteAccount/>}/>
