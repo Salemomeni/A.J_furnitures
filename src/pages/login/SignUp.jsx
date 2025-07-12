@@ -1,6 +1,6 @@
 import React from 'react'
 import './signup-in.css'
-import Sign from './Sign'
+// import Sign from './Sign'
 import Login from './login'
 export const SignUp = () => {
     // const [toggle, setToggle] = useState(false)
