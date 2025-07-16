@@ -39,6 +39,27 @@ export const loginUser = createAsyncThunk(
   }
 );
 
+// UPDATE USER DETAILS
+export const updateUser = createAsyncThunk(
+  'auth/updateUser',
+  async (updatedData, thunkAPI) => {
+    try {
+      const state = thunkAPI.getState();
+      const token = state.auth.token;
+
+      const res = await axios.put(`${API_URL}/update`, updatedData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      return res.data.user; // assumes backend returns updated user as `user`
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err.response.data);
+    }
+  }
+);
+
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
@@ -99,6 +120,23 @@ const authSlice = createSlice({
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload?.message || 'Login failed';
+      })
+
+      // UPDATE USER
+      .addCase(updateUser.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateUser.fulfilled, (state, action) => {
+        state.loading = false;
+        state.user = action.payload;
+
+        // Update localStorage
+        localStorage.setItem('user', JSON.stringify(action.payload));
+      })
+      .addCase(updateUser.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload?.message || 'User update failed';
       });
   }
 });

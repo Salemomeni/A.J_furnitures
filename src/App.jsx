@@ -23,6 +23,7 @@ import ChangePassword from './pages/Profile/account-management/ChangePassword'
 import SecurityQuestions from './pages/Profile/account-management/SecurityQuestions'
 import BasicDetails from './pages/Profile/account-management/BasicDetails'
 import EditBasicDetials from './pages/Profile/account-management/EditBasicDetials'
+import Logout from './pages/Profile/Logout/Logout'
 const App = () => {
   return (
     <>
@@ -42,6 +43,7 @@ const App = () => {
       <Route path='/contact' element = {<Contact/>}/>
       <Route element = {<ProtectedRoute/>}>
        <Route path='/profile' element = {<Profile/>}>
+       <Route path='logout' element = {<Logout/>}/>
        <Route path='accManagement' element = {<AccountManagement/>}>
        <Route path='editNumber' element = {<EditNumber/>}/>
        <Route path='basicDetails' element = {<BasicDetails/>}/>

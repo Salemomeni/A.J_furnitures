@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './accountManagement.css'; // make sure this CSS file contains your provided styles
+import { useDispatch, useSelector } from 'react-redux';
+import { updateUser } from '../../../redux/authSlice';
+import { useNavigate } from 'react-router-dom';
 
 const EditBasicDetials = () => {
   const [firstName, setFirstName] = useState('');
@@ -7,7 +10,9 @@ const EditBasicDetials = () => {
   const [lastName, setLastName] = useState('');
   const [middleName, setMiddleName] = useState('');
   const [gender, setGender] = useState('');
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const {user} = useSelector((state) => state.auth)
   const handleSubmit = (e) => {
     e.preventDefault();
     const userDetails = {
@@ -17,9 +22,18 @@ const EditBasicDetials = () => {
       email,
       gender,
     };
-    console.log('Updated Details:', userDetails);
-    // Send to context or backend here
+    dispatch(updateUser(userDetails))
+    navigate('/profile/accManagement/basicDetails');
   };
+ useEffect(() => {
+  if (user) {
+    setFirstName(user.firstName || '');
+    setMiddleName(user.middleName || '');
+    setLastName(user.lastName || '');
+    setEmail(user.email || '');
+    setGender(user.gender || '');
+  }
+}, [user]);
 
   return (
     <div className="profile-container">
